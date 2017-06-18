@@ -260,6 +260,7 @@ public class CalendarPanel extends JPanel implements MouseListener, IZoomSliderL
 				}
 			}
 		});
+		dayViewUpdateThread.setDaemon(true);
 		dayViewUpdateThread.start();
 	}
 
@@ -1380,5 +1381,9 @@ public class CalendarPanel extends JPanel implements MouseListener, IZoomSliderL
 //		return new ArrayList<NamedCalendar>(namedCalendars.keySet());
 //		/* ================================================== */
 //	}
+
+	public Thread getDayViewUpdateThread() {
+		return dayViewUpdateThread;
+	}
 
 }

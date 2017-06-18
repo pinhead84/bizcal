@@ -114,7 +114,7 @@ public class TimeLabelPanel
 	public void refresh() {
 		/* ================================================== */
 		try {
-			hourCount = end.getHour() - start.getHour();
+			hourCount = Math.abs(end.getHour() - start.getHour());
 
 			if (hourCount == 0)
 				hourCount = 24;

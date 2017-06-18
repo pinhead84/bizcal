@@ -93,10 +93,10 @@ public class NaviBar extends JPanel {
 		/* ================================================== */
 		if (alignment == TOP) {
 			/* ------------------------------------------------------- */
-			this.layout.insertRow(pos, new RowSpec("pref"));
+			this.layout.insertRow(pos, RowSpec.decode("pref"));
 			this.add(buttonPanel, cc.xy(2, pos));
 			pos++;
-			this.layout.insertRow(pos, new RowSpec("3dlu"));
+			this.layout.insertRow(pos, RowSpec.decode("3dlu"));
 			pos++;
 			/* ------------------------------------------------------- */
 		} else 
@@ -105,10 +105,10 @@ public class NaviBar extends JPanel {
 //			this.layout.insertRow(pos, new RowSpec("fill:pref:grow"));
 //			this.add(new JLabel("f "+pos), cc.xy(2, pos));
 //			pos++;
-			this.layout.insertRow(pos, new RowSpec("fill:pref:grow")); 
+			this.layout.insertRow(pos, RowSpec.decode("fill:pref:grow")); 
 			this.add(buttonPanel, cc.xy(2, pos));
 			pos++;
-			this.layout.insertRow(pos, new RowSpec("3dlu"));
+			this.layout.insertRow(pos, RowSpec.decode("3dlu"));
 			pos++;
 			/* ------------------------------------------------------- */
 		}else
@@ -117,16 +117,16 @@ public class NaviBar extends JPanel {
 //				this.layout.insertRow(pos, new RowSpec("fill:pref:grow"));
 //				this.add(new JLabel("f "+pos), cc.xy(2, pos));
 //				pos++;
-				this.layout.insertRow(pos, new RowSpec("fill:1dlu:grow")); 
+				this.layout.insertRow(pos, RowSpec.decode("fill:1dlu:grow")); 
 				this.add(buttonPanel, cc.xy(2, pos));
 				pos++;
-				this.layout.insertRow(pos, new RowSpec("3dlu"));
+				this.layout.insertRow(pos, RowSpec.decode("3dlu"));
 				pos++;
 				/* ------------------------------------------------------- */
 		} else{
-			this.layout.appendRow(new RowSpec("pref"));
+			this.layout.appendRow(RowSpec.decode("pref"));
 			this.add(buttonPanel, cc.xy(2, layout.getRowCount()));
-			this.layout.appendRow(new RowSpec("3dlu"));
+			this.layout.appendRow(RowSpec.decode("3dlu"));
 		}
 		
 		/* ================================================== */

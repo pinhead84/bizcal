@@ -3431,9 +3431,8 @@ public abstract class CalendarView {
 		Iterator<Event> i = _selectedEvents.iterator();
 		while (i.hasNext()) {
 			Event tmpEvent = (Event) i.next();
-			if (tmpEvent.getId().equals(event.getId()))
+			if (tmpEvent.getId() != null && tmpEvent.getId().equals(event.getId()))
 				return true;
-
 		}
 		return false;
 	}
